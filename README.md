@@ -11,11 +11,11 @@
 
 ## 🕰️What is our PLAN?
 
-24.04.01 ~ 04.28 : login page, survey
+24.04.01 ~ 04.28 : Login page, Survey
 
-24.04.29 ~ 05.05 : survey result
+24.04.29 ~ 05.05 : Survey result
 
-24.04.29 ~ : my page
+24.04.29 ~ : My page
 
 
 ## 🕰️개발기간
