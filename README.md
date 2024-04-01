@@ -1,10 +1,12 @@
-## ✨PEG✨
+## 💙PEG
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 💻프로젝트 소개
 
-In the project directory, you can run:
+나의 연애 사상, 상황별 선택 등을 담을 수 있는 새로운 아카이브 플랫폼
+나 그리고 상대의 '내면'이 궁금한
+당신에게 소울 SNS, 페그를 선사합니다.
 
 ### `npm start`
 
