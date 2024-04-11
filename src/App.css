@@ -1,38 +1,158 @@
-.App {
-  text-align: center;
+.full-background {
+  height: 1024px; /* 전체 화면 높이 */
+  width: 100%; /* 전체 화면 너비 */
+  color: rgba(255, 255, 255, 0.8);
+  background-position: center; /* 이미지를 화면 중앙에 위치 */
+  background-repeat: no-repeat; /* 이미지 반복 없음 */
+  background-size: cover; /* 이미지가 컨테이너를 꽉 채우도록 조정 */
+  background-image: linear-gradient(to bottom, #76908e, #a2ceca);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.full-backgroundd {
+  height: 1024px; /* 전체 화면 높이 */
+  width: 100%; /* 전체 화면 너비 */
+  color: rgba(255, 255, 255, 0.8);
+  background-position: center; /* 이미지를 화면 중앙에 위치 */
+  background-repeat: no-repeat; /* 이미지 반복 없음 */
+  background-size: cover; /* 이미지가 컨테이너를 꽉 채우도록 조정 */
+  background-image: linear-gradient(to bottom, #a2ceca, #f6f6f6);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.full-backgrounddd {
+  height: 1024px; /* 전체 화면 높이 */
+  width: 100%; /* 전체 화면 너비 */
+  background-image: url("img/Backgroundthird.png");
+  background-position: center; /* 이미지를 화면 중앙에 위치 */
+  background-repeat: no-repeat; /* 이미지 반복 없음 */
+  background-size: cover; /* 이미지가 컨테이너를 꽉 채우도록 조정 */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.full-backgroundddd {
+  height: 500px; /* 전체 화면 높이 */
+  width: 100%; /* 전체 화면 너비 */
+  background-image: url("img/Backgroundthird.png");
+  background-position: center; /* 이미지를 화면 중앙에 위치 */
+  background-repeat: no-repeat; /* 이미지 반복 없음 */
+  background-size: cover; /* 이미지가 컨테이너를 꽉 채우도록 조정 */
+}
+.full-backgrounddddd {
+  height: 180px; /* 전체 화면 높이 */
+  width: 100%; /* 전체 화면 너비 */
+  background-image: url("img/Backgroundthird.png");
+  background-position: center; /* 이미지를 화면 중앙에 위치 */
+  background-repeat: no-repeat; /* 이미지 반복 없음 */
+  background-size: cover; /* 이미지가 컨테이너를 꽉 채우도록 조정 */
+}
+.header {
   display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.Mainpagetotal {
+  display: flex;
+  height: "100%";
+  width: "100%";
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+.MainText {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 600px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-.App-link {
-  color: #61dafb;
+.secondMainpage {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
+.secondheader {
+  font-size: 130px;
+}
+.secondtext {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 0px;
+}
+.Truestories {
+  margin-top: 150px;
+  margin-left: 800px;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 40px;
+}
+
+.insideweight {
+  font-size: 140px;
+}
+
+.boldtext {
+  font-size: 60px;
+  font-weight: bold;
+}
+.lighttext {
+  font-size: 22px;
+  margin-top: 13px;
+}
+
+.lastPeg {
+  font-size: 230px;
+  margin-left: 40px;
+}
+
+.Information {
+  display: flex;
+  text-align: Left;
+  margin-top: 80px;
+}
+.footer {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.team {
+  margin-right: 100px;
+  margin-left: 40px;
+}
+.email {
+  margin-right: 100px;
+  margin-left: 100px;
+}
+.require {
+  margin-left: 100px;
+}
+
+.animated-title {
+  font-size: 40px;
+  font-weight: 300;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  padding: 100px 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-weight: 500;
+}
+.animated-title .track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 60s linear infinite;
+}
+@keyframes marquee {
   from {
-    transform: rotate(0deg);
+    transform: translateX(0);
   }
   to {
-    transform: rotate(360deg);
+    transform: translateX(-50%);
   }
 }
