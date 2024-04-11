@@ -1,24 +1,26 @@
 .full-background {
-  height: 100vh; /* 전체 화면 높이 */
-  width: 100vw; /* 전체 화면 너비 */
-  background-image: url("img/Backgroundfirst.png");
+  height: 1024px; /* 전체 화면 높이 */
+  width: 100%; /* 전체 화면 너비 */
+  color: rgba(255, 255, 255, 0.8);
   background-position: center; /* 이미지를 화면 중앙에 위치 */
   background-repeat: no-repeat; /* 이미지 반복 없음 */
   background-size: cover; /* 이미지가 컨테이너를 꽉 채우도록 조정 */
+  background-image: linear-gradient(to bottom, #76908e, #a2ceca);
 }
 
 .full-backgroundd {
-  height: 100vh; /* 전체 화면 높이 */
-  width: 100vw; /* 전체 화면 너비 */
-  background-image: url("img/Backgroundsecond.png");
+  height: 1024px; /* 전체 화면 높이 */
+  width: 100%; /* 전체 화면 너비 */
+  color: rgba(255, 255, 255, 0.8);
   background-position: center; /* 이미지를 화면 중앙에 위치 */
   background-repeat: no-repeat; /* 이미지 반복 없음 */
   background-size: cover; /* 이미지가 컨테이너를 꽉 채우도록 조정 */
+  background-image: linear-gradient(to bottom, #a2ceca, #f6f6f6);
 }
 
 .full-backgrounddd {
-  height: 100vh; /* 전체 화면 높이 */
-  width: 100vw; /* 전체 화면 너비 */
+  height: 1024px; /* 전체 화면 높이 */
+  width: 100%; /* 전체 화면 너비 */
   background-image: url("img/Backgroundthird.png");
   background-position: center; /* 이미지를 화면 중앙에 위치 */
   background-repeat: no-repeat; /* 이미지 반복 없음 */
@@ -33,8 +35,8 @@
 
 .Mainpagetotal {
   display: flex;
-  height: 100vh;
-  width: 100vw;
+  height: "100%";
+  width: "100%";
   flex-direction: column;
   justify-content: space-between;
 }
@@ -54,11 +56,22 @@
 }
 
 .secondheader {
-  font-size: 150px;
+  font-size: 130px;
 }
 .secondtext {
   font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  margin-top: 0px;
+}
+.Truestories {
+  margin-top: 150px;
+  margin-left: 800px;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 40px;
+}
+
+.insideweight {
+  font-size: 140px;
 }
