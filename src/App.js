@@ -10,14 +10,28 @@ const App = () => {
       <div className="full-background">
         <div className="Mainpagetotal">
           <div className="header">
-            <div>
+            <div
+              style={{
+                marginLeft: "40px",
+                marginTop: "50px",
+              }}
+            >
               The Bird fight its way out of the egg. <br></br>The egg is the
               world.<br></br> Who would be born must<br></br> first destory a
               world.
             </div>
             <div>
               {" "}
-              <img src={LoginBt} alt="LoginBt" />{" "}
+              <img
+                src={LoginBt}
+                alt="LoginBt"
+                style={{
+                  height: "61px", // 전체 화면 높이
+                  width: "132px",
+                  marginRight: "39px",
+                  marginTop: "30px",
+                }}
+              />{" "}
             </div>
           </div>
           <div className="Truestories">
@@ -82,7 +96,7 @@ const App = () => {
           <div
             style={{
               positiom: "absolute",
-              marginRight: "-30px",
+              marginRight: "30px",
               marginTop: "310px",
               textAlign: "Left",
               zIndex: 2,
@@ -121,7 +135,7 @@ const App = () => {
           <div
             style={{
               positiom: "absolute",
-              marginLeft: "-30px",
+              marginLeft: "75px",
               marginTop: "310px",
               textAlign: "Right",
             }}
