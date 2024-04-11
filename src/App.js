@@ -57,11 +57,12 @@ const App = () => {
             style={{
               positiom: "absolute",
               marginLeft: "-30px",
-              marginTop: "400px",
+              marginTop: "310px",
+              textAlign: "Right",
             }}
           >
-            <div>나를 알아가는 상황문답</div>
-            <div>
+            <div className="boldtext">나를 알아가는 상황문답</div>
+            <div className="lighttext">
               제시된 상황 속에서 <br></br>나의 내면을 기록해보세요
             </div>
           </div>
@@ -78,10 +79,19 @@ const App = () => {
             justifyContent: "flex-end",
           }}
         >
-          <div style={{ display: "absolute", marginLeft: "100px" }}>
-            <div>나를 알아가는 상황문답</div>
-            <div>
-              제시된 상황 속에서 <br></br>나의 내면을 기록해보세요
+          <div
+            style={{
+              positiom: "absolute",
+              marginRight: "-30px",
+              marginTop: "310px",
+              textAlign: "Left",
+              zIndex: 2,
+            }}
+          >
+            <div className="boldtext">나를 담은 아카이브</div>
+            <div className="lighttext">
+              휘발되는 것이 아닌 나의 결과를 <br></br>아카이빙하여 친구와 나눌
+              수 있어요
             </div>
           </div>
           <img
@@ -91,6 +101,7 @@ const App = () => {
               height: "535.84px", // 전체 화면 높이
               width: "811px",
               marginRight: "55px",
+              zIndex: 0,
             }}
           />
         </div>
@@ -107,10 +118,65 @@ const App = () => {
               marginLeft: "55px",
             }}
           />
-          <div style={{ display: "absolute" }}>
-            <div>나를 알아가는 상황문답</div>
-            <div>
-              제시된 상황 속에서 <br></br>나의 내면을 기록해보세요
+          <div
+            style={{
+              positiom: "absolute",
+              marginLeft: "-30px",
+              marginTop: "310px",
+              textAlign: "Right",
+            }}
+          >
+            <div className="boldtext">나만의 테스트카드</div>
+            <div className="lighttext">
+              테스트 결과에 따른 <br></br>나만의 이미지 카드를 받을 수 있어요
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="full-backgroundddd">
+        <div className="footer">
+          <div className="lastPeg">PEG</div>
+          <div className="Information">
+            <div className="team">
+              TEAM : Beggy Jins<br></br>
+              <br></br>
+              김고은(PM)<br></br>
+              김은진(Designer)<br></br>
+              김하은(Front_End Developer)<br></br>
+              오세훔(Back_End Developer)<br></br>
+            </div>
+            <div className="email">
+              EMAIL<br></br>
+              <br></br>
+              jinny010718@handong.ac.kr<br></br>
+              22100071@handong.ac.kr<br></br>
+              hg2660765@gmail.com <br></br>
+              saint0325@handong.ac.kr
+            </div>
+            <div className="require">
+              INSTAGRAM<br></br>
+              @Peg.Official._<br></br>
+              <br></br>
+              제휴 문의 <br></br>광고 문의<br></br> PR 문의 <br></br>IR 문의
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="full-backgrounddddd">
+        <div class="animated-title">
+          <div class="track">
+            <div class="content">
+              &nbsp;&nbsp; SOUL SNS ARCHIVING ME&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; SOUL SNS
+              ARCHIVING ME &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; SOUL SNS
+              ARCHIVING ME &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; SOUL SNS
+              ARCHIVING ME &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; SOUL SNS
+              ARCHIVING ME &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; SOUL SNS
+              ARCHIVING ME
             </div>
           </div>
         </div>

@@ -27,6 +27,22 @@
   background-size: cover; /* 이미지가 컨테이너를 꽉 채우도록 조정 */
 }
 
+.full-backgroundddd {
+  height: 500px; /* 전체 화면 높이 */
+  width: 100%; /* 전체 화면 너비 */
+  background-image: url("img/Backgroundthird.png");
+  background-position: center; /* 이미지를 화면 중앙에 위치 */
+  background-repeat: no-repeat; /* 이미지 반복 없음 */
+  background-size: cover; /* 이미지가 컨테이너를 꽉 채우도록 조정 */
+}
+.full-backgrounddddd {
+  height: 180px; /* 전체 화면 높이 */
+  width: 100%; /* 전체 화면 너비 */
+  background-image: url("img/Backgroundthird.png");
+  background-position: center; /* 이미지를 화면 중앙에 위치 */
+  background-repeat: no-repeat; /* 이미지 반복 없음 */
+  background-size: cover; /* 이미지가 컨테이너를 꽉 채우도록 조정 */
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -59,7 +75,7 @@
   font-size: 130px;
 }
 .secondtext {
-  font-size: 20px;
+  font-size: 25px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -74,4 +90,69 @@
 
 .insideweight {
   font-size: 140px;
+}
+
+.boldtext {
+  font-size: 60px;
+  font-weight: bold;
+}
+.lighttext {
+  font-size: 22px;
+  margin-top: 13px;
+}
+
+.lastPeg {
+  font-size: 230px;
+  margin-left: 40px;
+}
+
+.Information {
+  display: flex;
+  text-align: Left;
+  margin-top: 80px;
+}
+.footer {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.team {
+  margin-right: 100px;
+  margin-left: 40px;
+}
+.email {
+  margin-right: 100px;
+  margin-left: 100px;
+}
+.require {
+  margin-left: 100px;
+}
+
+.animated-title {
+  font-size: 40px;
+  font-weight: 300;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  padding: 100px 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-weight: 500;
+}
+.animated-title .track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 60s linear infinite;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
