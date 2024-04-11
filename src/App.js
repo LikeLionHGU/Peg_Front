@@ -157,7 +157,7 @@ const App = () => {
               김고은(PM)<br></br>
               김은진(Designer)<br></br>
               김하은(Front_End Developer)<br></br>
-              오세훔(Back_End Developer)<br></br>
+              오세훈(Back_End Developer)<br></br>
             </div>
             <div className="email">
               EMAIL<br></br>
