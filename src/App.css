@@ -16,6 +16,15 @@
   background-size: cover; /* 이미지가 컨테이너를 꽉 채우도록 조정 */
 }
 
+.full-backgrounddd {
+  height: 100vh; /* 전체 화면 높이 */
+  width: 100vw; /* 전체 화면 너비 */
+  background-image: url("img/Backgroundthird.png");
+  background-position: center; /* 이미지를 화면 중앙에 위치 */
+  background-repeat: no-repeat; /* 이미지 반복 없음 */
+  background-size: cover; /* 이미지가 컨테이너를 꽉 채우도록 조정 */
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -32,6 +41,24 @@
 .MainText {
   display: flex;
   justify-content: center;
-  font-size: 800px;
+  font-size: 600px;
   color: rgba(255, 255, 255, 0.8);
+}
+
+.secondMainpage {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.secondheader {
+  font-size: 150px;
+}
+.secondtext {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
