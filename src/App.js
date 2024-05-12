@@ -1,10 +1,42 @@
+import React, { useEffect } from "react";
 import "./App.css";
 import LoginBt from "./img/LoginBt.png";
 import Y2K from "./img/Y2K.png";
 import heart from "./img/heart.png";
 import test from "./img/test.png";
+import { animateScroll as scroll } from "react-scroll";
+import SurveyPage from "./SurveyPage";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useNavigate,
+} from "react-router-dom";
 
-const App = () => {
+function App() {
+  useEffect(() => {
+    const handleScroll = () => {
+      const elements = document.querySelectorAll(".fade-in-section");
+      for (let i = 0; i < elements.length; i++) {
+        const element = elements[i];
+        const rect = element.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+          element.classList.add("visible"); // 애니메이션 클래스 추가
+        }
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // SurveyPage로 이동하기 위한 useNavigate 훅
+  const navigate = useNavigate();
+
+  // SurveyPage로 이동하는 함수
+  const goToSurveyPage = () => {
+    navigate("/survey");
+  };
+
   return (
     <>
       <div className="full-background">
@@ -26,17 +58,19 @@ const App = () => {
                 src={LoginBt}
                 alt="LoginBt"
                 style={{
-                  height: "61px", // 전체 화면 높이
-                  width: "132px",
-                  marginRight: "39px",
-                  marginTop: "30px",
+                  height: "56px", // 전체 화면 높이
+                  width: "125px",
+                  marginRight: "35px",
+                  marginTop: "35px",
                 }}
               />{" "}
             </div>
           </div>
+
           <div className="Truestories">
             True stories <br></br>about the deep <br></br>inside of me +
           </div>
+
           <div className="MainText">PEG</div>
         </div>
       </div>
@@ -83,6 +117,7 @@ const App = () => {
         </div>
       </div>
       {/* */}
+
       <div className="full-backgrounddd">
         {" "}
         <div
@@ -177,9 +212,9 @@ const App = () => {
         </div>
       </div>
       <div className="full-backgrounddddd">
-        <div class="animated-title">
-          <div class="track">
-            <div class="content">
+        <div className="animated-title">
+          <div className="track">
+            <div className="content">
               &nbsp;&nbsp; SOUL SNS ARCHIVING ME&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; SOUL SNS
               ARCHIVING ME &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
@@ -197,6 +232,6 @@ const App = () => {
       </div>
     </>
   );
-};
+}
 
 export default App;
