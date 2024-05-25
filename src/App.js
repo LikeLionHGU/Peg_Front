@@ -6,6 +6,7 @@ import heart from "./img/heart.png";
 import test from "./img/test.png";
 import { animateScroll as scroll } from "react-scroll";
 import SurveyPage from "./SurveyPage";
+import MainPage from "./MainPage"; // MainPage 컴포넌트를 import합니다.
 import {
   BrowserRouter as Router,
   Route,
@@ -29,12 +30,22 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // SurveyPage로 이동하기 위한 useNavigate 훅
   const navigate = useNavigate();
 
-  // SurveyPage로 이동하는 함수
+  const handleClick = () => {
+    goToSurveyPage();
+  };
+
   const goToSurveyPage = () => {
     navigate("/survey");
+  };
+
+  const handleClickss = () => {
+    goToMainPage();
+  };
+
+  const goToMainPage = () => {
+    navigate("/mainpage");
   };
 
   return (
@@ -54,16 +65,18 @@ function App() {
             </div>
             <div>
               {" "}
-              <img
-                src={LoginBt}
-                alt="LoginBt"
-                style={{
-                  height: "56px", // 전체 화면 높이
-                  width: "125px",
-                  marginRight: "35px",
-                  marginTop: "35px",
-                }}
-              />{" "}
+              <a href=" http://localhost:8080/oauth2/authorization/google">
+                <img
+                  src={LoginBt}
+                  alt="LoginBt"
+                  style={{
+                    height: "56px", // 전체 화면 높이
+                    width: "125px",
+                    marginRight: "35px",
+                    marginTop: "35px",
+                  }}
+                />{" "}
+              </a>
             </div>
           </div>
 
@@ -182,6 +195,44 @@ function App() {
           </div>
         </div>
       </div>
+
+      <div
+        style={{
+          width: 200, // 직사각형 너비
+          height: 100, // 직사각형 높이
+          backgroundColor: "blue", // 배경색
+          cursor: "pointer", // 마우스 커서
+          display: "flex", // 중앙 정렬을 위해 flex 사용
+          justifyContent: "center", // 수평 가운데 정렬
+          alignItems: "center", // 수직 가운데 정렬
+          borderRadius: 8, // 테두리 모서리 둥글기
+          color: "white", // 텍스트 색상
+          fontSize: 16, // 텍스트 크기
+          fontWeight: "bold", // 텍스트 굵기
+        }}
+        onClick={handleClick} // 클릭 이벤트 핸들러
+      >
+        클릭
+      </div>
+      <div
+        style={{
+          width: 200, // 직사각형 너비
+          height: 100, // 직사각형 높이
+          backgroundColor: "blue", // 배경색
+          cursor: "pointer", // 마우스 커서
+          display: "flex", // 중앙 정렬을 위해 flex 사용
+          justifyContent: "center", // 수평 가운데 정렬
+          alignItems: "center", // 수직 가운데 정렬
+          borderRadius: 8, // 테두리 모서리 둥글기
+          color: "white", // 텍스트 색상
+          fontSize: 16, // 텍스트 크기
+          fontWeight: "bold", // 텍스트 굵기
+        }}
+        onClick={handleClickss} // 클릭 이벤트 핸들러
+      >
+        클릭
+      </div>
+
       <div className="full-backgroundddd">
         <div className="footer">
           <div className="lastPeg">PEG</div>
