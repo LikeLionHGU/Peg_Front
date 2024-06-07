@@ -107,7 +107,7 @@ function App() {
               className="Truestories"
               style={{
                 color: "black",
-                marginBottom: "0px",
+
                 marginLeft: "700px",
               }}
             >
