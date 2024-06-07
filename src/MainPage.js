@@ -336,7 +336,7 @@ const MainPage = () => {
               src={Pegred}
               alt="Pegred"
             />
-            <div style={{ display: "flex" }}>
+            <div style={{ display: "flex", flexDirection: "column" }}>
               <div
                 style={{
                   marginTop: "40px",
@@ -402,7 +402,8 @@ const MainPage = () => {
               style={{
                 width: 471, // 직사각형 너비
                 height: 348,
-                marginRight: "10px",
+                marginRight: "20px",
+                marginLeft: "20px",
               }}
               src={recthree}
               alt="rrecthree"
@@ -418,53 +419,44 @@ const MainPage = () => {
           </div>
         </div>
       </div>
-      <div className="full-background">
+      <br></br> <br></br>
+      <br></br>
+      <div className="full-backgroundddd">
         <div className="footer">
           <div className="lastPeg">PEG</div>
           <div className="Information">
             <div className="team">
-              TEAM : Beggy Jins
-              <br />
-              <br />
-              김고은(PM)
-              <br />
-              김은진(Designer)
-              <br />
-              김하은(Front_End Developer)
-              <br />
-              오세훈(Back_End Developer)
-              <br />
+              TEAM : Beggy Jins<br></br>
+              <br></br>
+              김고은(PM)<br></br>
+              김은진(Designer)<br></br>
+              김하은(Front_End Developer)<br></br>
+              오세훈(Back_End Developer)<br></br>
             </div>
             <div className="email">
-              EMAIL
-              <br />
-              <br />
-              jinny010718@handong.ac.kr
-              <br />
-              22100071@handong.ac.kr
-              <br />
-              hg2660765@gmail.com <br />
+              EMAIL<br></br>
+              <br></br>
+              jinny010718@handong.ac.kr<br></br>
+              22100071@handong.ac.kr<br></br>
+              hg2660765@gmail.com <br></br>
               saint0325@handong.ac.kr
             </div>
             <div className="require">
-              INSTAGRAM
-              <br />
-              @Peg.Official._
-              <br />
-              <br />
-              제휴 문의 <br />
-              광고 문의
-              <br /> PR 문의 <br />
-              IR 문의
+              INSTAGRAM<br></br>
+              @Peg.Official._<br></br>
+              <br></br>
+              제휴 문의 <br></br>광고 문의<br></br> PR 문의 <br></br>IR 문의
             </div>
           </div>
         </div>
       </div>
-      <div className="full-background">
+      <div className="full-backgrounddddd">
         <div className="animated-title">
           <div className="track">
             <div className="content">
               &nbsp;&nbsp; SOUL SNS ARCHIVING ME&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; SOUL SNS
+              ARCHIVING ME &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; SOUL SNS
               ARCHIVING ME &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; SOUL SNS

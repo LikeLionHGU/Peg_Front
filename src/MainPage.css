@@ -26,3 +26,230 @@
   text-align: left; /* 텍스트 왼쪽 정렬 */
   z-index: 1;
 }
+
+.full-background {
+  height: 1024px; /* 전체 화면 높이 */
+  width: 100%; /* 전체 화면 너비 */
+  color: rgba(255, 255, 255, 0.8);
+  background-position: center; /* 이미지를 화면 중앙에 위치 */
+  background-repeat: no-repeat; /* 이미지 반복 없음 */
+  background-size: cover; /* 이미지가 컨테이너를 꽉 채우도록 조정 */
+  background-image: linear-gradient(to bottom, #76908e, #a2ceca);
+}
+
+.full-backgroundd {
+  height: 1024px; /* 전체 화면 높이 */
+  width: 100%; /* 전체 화면 너비 */
+  color: rgba(255, 255, 255, 0.8);
+  background-position: center; /* 이미지를 화면 중앙에 위치 */
+  background-repeat: no-repeat; /* 이미지 반복 없음 */
+  background-size: cover; /* 이미지가 컨테이너를 꽉 채우도록 조정 */
+  background-image: linear-gradient(to bottom, #a2ceca, #f6f6f6);
+}
+
+.full-backgrounddd {
+  height: 1024px; /* 전체 화면 높이 */
+  width: 100%; /* 전체 화면 너비 */
+
+  background-position: center; /* 이미지를 화면 중앙에 위치 */
+  background-repeat: no-repeat; /* 이미지 반복 없음 */
+  background-size: cover; /* 이미지가 컨테이너를 꽉 채우도록 조정 */
+}
+
+.full-backgroundddd {
+  height: 500px; /* 전체 화면 높이 */
+  width: 100%; /* 전체 화면 너비 */
+
+  background-position: center; /* 이미지를 화면 중앙에 위치 */
+  background-repeat: no-repeat; /* 이미지 반복 없음 */
+  background-size: cover; /* 이미지가 컨테이너를 꽉 채우도록 조정 */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.Mainpagetotal {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 스크롤 시 글씨 변화 */
+.MainText.scrolled {
+  transform: translateY(-100px); /* 위로 100px 이동 */
+  opacity: 0; /* 투명도 0 */
+}
+
+.secondMainpage {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.secondheader {
+  font-size: 130px;
+  font-weight: 500;
+}
+
+.secondtext {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 0px;
+  font-weight: 800;
+}
+
+.Truestories {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 50px;
+  z-index: 1;
+  /* 가운데 정렬 */
+}
+
+.MainText {
+  display: flex;
+  justify-content: center;
+  font-size: 600px;
+  color: rgba(255, 255, 255, 1);
+  position: fixed;
+  margin-top: 360px; /* 조정 가능한 값 */
+  margin-left: 170px;
+  transition: opacity 0.5s, color 0.5s; /* 변화 효과 추가 */
+}
+
+.insideweight {
+  font-size: 140px;
+}
+
+.boldtext {
+  font-size: 60px;
+  font-weight: bold;
+  margin-left: 800px;
+  margin-top: 0px;
+}
+
+.boldtextt {
+  font-size: 60px;
+  font-weight: bold;
+  margin-right: 900px;
+  margin-top: -30px;
+}
+.boldtexttt {
+  font-size: 60px;
+  font-weight: bold;
+  margin-left: 800px;
+  margin-top: 140px;
+}
+
+.lighttext {
+  font-size: 22px;
+  margin-top: 13px;
+  opacity: 0.5;
+}
+
+.lastPeg {
+  font-size: 230px;
+  margin-left: 40px;
+}
+
+.Information {
+  display: flex;
+  text-align: left;
+  margin-top: 80px;
+}
+
+.footer {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.team {
+  margin-right: 100px;
+  margin-left: 40px;
+}
+
+.email {
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.require {
+  margin-left: 100px;
+}
+
+.animated-title {
+  font-size: 40px;
+  font-weight: 300;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  padding: 100px 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-weight: 500;
+}
+
+.animated-title .track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 60s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* App.css에 추가 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.fade-in-section {
+  opacity: 0; /* 초기 상태는 보이지 않도록 설정 */
+}
+
+.visible {
+  animation: fadeIn 1s ease-out forwards; /* 스크롤 시 보이도록 설정 */
+}
+
+.MainText.scrolled {
+  opacity: 0.2;
+}
+
+.MainText {
+  font-size: 600px;
+  margin-top: 190px;
+  transition: opacity 0.5s, color 0.5s;
+  color: rgba(255, 254, 254, 0.7); /* 흰색의 연한 색상 */
+  font-weight: 500;
+}
