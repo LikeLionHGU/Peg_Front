@@ -35,6 +35,7 @@
   background-repeat: no-repeat; /* 이미지 반복 없음 */
   background-size: cover; /* 이미지가 컨테이너를 꽉 채우도록 조정 */
 }
+
 .full-backgrounddddd {
   height: 180px; /* 전체 화면 높이 */
   width: 100%; /* 전체 화면 너비 */
@@ -43,6 +44,7 @@
   background-repeat: no-repeat; /* 이미지 반복 없음 */
   background-size: cover; /* 이미지가 컨테이너를 꽉 채우도록 조정 */
 }
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -51,20 +53,10 @@
 
 .Mainpagetotal {
   display: flex;
-  height: "100%";
-  width: "100%";
+  height: 100%;
+  width: 100%;
   flex-direction: column;
   justify-content: space-between;
-}
-.MainText {
-  display: flex;
-  justify-content: center;
-  font-size: 600px;
-  color: rgba(255, 255, 255, 1);
-  position: fixed;
-  margin-top: 360px;
-  margin-left: 170px;
-  transition: transform 0.5s, opacity 0.5s; /* 변화 효과 추가 */
 }
 
 /* 스크롤 시 글씨 변화 */
@@ -72,6 +64,7 @@
   transform: translateY(-100px); /* 위로 100px 이동 */
   opacity: 0; /* 투명도 0 */
 }
+
 .secondMainpage {
   display: flex;
   height: 100vh;
@@ -82,6 +75,7 @@
 
 .secondheader {
   font-size: 130px;
+  font-weight: 500;
 }
 
 .secondtext {
@@ -90,12 +84,25 @@
   align-items: center;
   justify-content: space-evenly;
   margin-top: 0px;
+  font-weight: 800;
 }
+
 .Truestories {
-  margin-top: 200px;
-  margin-left: 760px;
   color: rgba(0, 0, 0, 0.8);
   font-size: 50px;
+  z-index: 1;
+  /* 가운데 정렬 */
+}
+
+.MainText {
+  display: flex;
+  justify-content: center;
+  font-size: 600px;
+  color: rgba(255, 255, 255, 1);
+  position: fixed;
+  margin-top: 360px; /* 조정 가능한 값 */
+  margin-left: 170px;
+  transition: opacity 0.5s, color 0.5s; /* 변화 효과 추가 */
 }
 
 .insideweight {
@@ -105,10 +112,27 @@
 .boldtext {
   font-size: 60px;
   font-weight: bold;
+  margin-left: 800px;
+  margin-top: 0px;
 }
+
+.boldtextt {
+  font-size: 60px;
+  font-weight: bold;
+  margin-right: 900px;
+  margin-top: -30px;
+}
+.boldtexttt {
+  font-size: 60px;
+  font-weight: bold;
+  margin-left: 800px;
+  margin-top: 140px;
+}
+
 .lighttext {
   font-size: 22px;
   margin-top: 13px;
+  opacity: 0.5;
 }
 
 .lastPeg {
@@ -118,9 +142,10 @@
 
 .Information {
   display: flex;
-  text-align: Left;
+  text-align: left;
   margin-top: 80px;
 }
+
 .footer {
   display: flex;
   height: 100%;
@@ -128,14 +153,17 @@
   flex-direction: column;
   justify-content: flex-start;
 }
+
 .team {
   margin-right: 100px;
   margin-left: 40px;
 }
+
 .email {
   margin-right: 100px;
   margin-left: 100px;
 }
+
 .require {
   margin-left: 100px;
 }
@@ -152,12 +180,14 @@
   overflow-y: hidden;
   font-weight: 500;
 }
+
 .animated-title .track {
   position: absolute;
   white-space: nowrap;
   will-change: transform;
   animation: marquee 60s linear infinite;
 }
+
 @keyframes marquee {
   from {
     transform: translateX(0);
@@ -190,4 +220,16 @@
 
 .visible {
   animation: fadeIn 1s ease-out forwards; /* 스크롤 시 보이도록 설정 */
+}
+
+.MainText.scrolled {
+  opacity: 0.2;
+}
+
+.MainText {
+  font-size: 600px;
+  margin-top: 190px;
+  transition: opacity 0.5s, color 0.5s;
+  color: rgba(255, 254, 254, 0.7); /* 흰색의 연한 색상 */
+  font-weight: 500;
 }

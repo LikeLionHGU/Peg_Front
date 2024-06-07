@@ -4,8 +4,8 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SurveyPage from "./SurveyPage";
-import MainPage from "./MainPage";
 import Auth from "./Auth";
+import MainPage from "./MainPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -19,7 +19,7 @@ root.render(
             <Route path=":cardId" element={<DetailCard />} />
           </Route> */}
 
-        <Route path="/MainPage" element={<MainPage />} />
+        <Route path="/profile/:username" element={<MainPage />} />
         <Route path="/Auth/:id" element={<Auth />} />
       </Routes>
     </BrowserRouter>

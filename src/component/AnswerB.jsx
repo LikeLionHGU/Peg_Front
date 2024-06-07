@@ -12,6 +12,7 @@ function AnswerB({
     <div>
       {answerOption.map((item, idx) => (
         <div
+          key={idx} // 추가된 key prop
           className={currentAnswer === item.answerID ? "selected" : ""}
           onClick={() => {
             setAnswer(questionId, item.answerID);
