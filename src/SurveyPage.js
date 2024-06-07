@@ -314,40 +314,42 @@ function SurveyPage() {
             alt="halfcircle"
             className="background-images"
           />
-          <div>Hello World!</div>
+          <div className="content-text">
+            <div>Hello World!</div>
 
-          <div>Current Question : {currentQuestion}</div>
-          <h1>{data[currentQuestion].title}</h1>
-          <div>
-            <h3>Answer</h3>
-            {answerComponent}
-          </div>
-          <div>
-            <button
-              onClick={() => {
-                setCurrentQuestion((prev) => {
-                  if (prev > 0) return prev - 1;
-                  return 0;
-                });
-              }}
-            >
-              이전질문
-            </button>
-            {data.length - 1 > currentQuestion ? (
-              <button onClick={nextQuestion} disabled={!currentAnswer}>
-                다음질문
-              </button>
-            ) : (
+            <div>Current Question : {currentQuestion}</div>
+            <h1>{data[currentQuestion].title}</h1>
+            <div className="question-answer">
+              <h3>Answer</h3>
+              {answerComponent}
+            </div>
+            <div>
               <button
                 onClick={() => {
-                  console.log("서버에 보낼겁니다!!!", resultObject);
-                  navigate("/result/characterC");
+                  setCurrentQuestion((prev) => {
+                    if (prev > 0) return prev - 1;
+                    return 0;
+                  });
                 }}
-                disabled={!currentAnswer}
               >
-                등록
+                이전질문
               </button>
-            )}
+              {data.length - 1 > currentQuestion ? (
+                <button onClick={nextQuestion} disabled={!currentAnswer}>
+                  다음질문
+                </button>
+              ) : (
+                <button
+                  onClick={() => {
+                    console.log("서버에 보낼겁니다!!!", resultObject);
+                    navigate("/result/characterC");
+                  }}
+                  disabled={!currentAnswer}
+                >
+                  등록
+                </button>
+              )}
+            </div>
           </div>
         </div>
       </div>
