@@ -115,7 +115,7 @@ function SurveyPage() {
 
   return (
     <>
-      <div className="container">
+      <div className="SurveyPage">
         <img src={teduri} alt="teduri" className="background-image" />
         <div className="content">
           <img

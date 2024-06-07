@@ -1,5 +1,5 @@
 /* SurveyPage.css */
-.container {
+.SurveyPage {
   position: relative; /* 상대 위치 설정 */
   background-color: black; /* 배경색을 검정색으로 설정 */
   color: white; /* 텍스트 색상을 흰색으로 설정 */
@@ -12,7 +12,7 @@
   overflow: hidden; /* 자식 요소가 부모 요소를 벗어나지 않도록 설정 */
 }
 
-.background-image {
+.SurveyPage .background-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -22,7 +22,7 @@
   z-index: 1; /* 이미지가 뒤에 표시되도록 설정 */
   display: absolute;
 }
-.background-images {
+.SurveyPage .background-images {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -35,15 +35,15 @@
   display: absolute;
 }
 
-.content {
+.SurveyPage .content {
   position: relative; /* 상대 위치 설정 */
   z-index: 1; /* 텍스트와 버튼이 이미지 위에 표시되도록 설정 */
   width: 710px;
   margin: 32px;
 }
-.content .content-text {
+.SurveyPage .content .content-text {
   padding: 128px;
 }
 
-.question-answer {
+.SurveyPage .question-answer {
 }

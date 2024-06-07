@@ -1,4 +1,4 @@
-.container {
+.Result {
   background-color: black;
   color: white;
   min-height: 100vh;
@@ -9,12 +9,14 @@
   overflow: hidden;
   flex-direction: row; /* 자식 요소가 부모 요소를 벗어나지 않도록 설정 */
 }
-.containers {
+.Result .containers {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
 }
 
-.background-image {
+.Result .background-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -24,26 +26,37 @@
   z-index: 1; /* 이미지가 뒤에 표시되도록 설정 */
   display: absolute;
 }
-.as {
+.Result .as {
   width: 300px;
   height: 500px;
   margin-right: 100px;
 }
-.ass {
+.Result .ass {
   width: 500px;
   height: 200px;
 }
-.asss {
+.Result .asss {
   width: 440px;
   height: 70px;
 }
-.assss {
+.Result .assss {
   margin-top: 10px;
   width: 440px;
   height: 70px;
 }
-.asssss {
+.Result .asssss {
   margin-top: 10px;
   width: 440px;
   height: 70px;
+}
+
+.Result .right {
+  display: inline-block;
+}
+
+.Result p {
+  display: inline-block;
+}
+
+.Result .left {
 }
