@@ -1,0 +1,28 @@
+.margin-top-text {
+  margin-top: 20px; /* marginTop 설정 */
+}
+.custom-text {
+  margin-left: 10px;
+  font-size: 13px; /* 글씨 크기 설정 */
+  font-weight: 700;
+}
+.custom-texts {
+  margin-right: 70px;
+  font-size: 18px; /* 글씨 크기 설정 */
+  font-weight: 700;
+  margin-bottom: 1px;
+}
+.left-aligned-text {
+  margin-left: 40px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left; /* 텍스트 왼쪽 정렬 */
+}
+.left-aligned-texts {
+  margin-left: 50px;
+  margin-top: -25px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left; /* 텍스트 왼쪽 정렬 */
+  z-index: 1;
+}

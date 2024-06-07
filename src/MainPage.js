@@ -4,13 +4,17 @@ import "./MainPage.css"; // MainPage.css 파일 import
 import LogoutBt from "./img/LogoutBt.png";
 import Mainlogo from "./img/Mainlogo.png";
 import Pegred from "./img/Pegred.png";
-import search from "./img/search.png";
+import ex from "./img/ex.png";
+import glass from "./img/glass.png";
 import Vector16 from "./img/Vector16.png";
 import gray from "./img/gray.png";
 import profile from "./img/profile.png";
 import recone from "./img/recone.png";
 import rectwo from "./img/rectwo.png";
 import recthree from "./img/recthree.png";
+import Vector15 from "./img/Vector15.png";
+import du from "./img/du.png";
+import Cat from "./img/Cat.png";
 
 const MainPage = () => {
   const [userData, setUserData] = useState(null);
@@ -43,8 +47,6 @@ const MainPage = () => {
 
   return (
     <>
-      <div>안녕하세요 {userData ? userData.name : "로딩중"} 님</div>
-      <div>{username} 님 프로필을 방문하셨습니다</div>
       <div
         style={{
           display: "flex",
@@ -90,102 +92,198 @@ const MainPage = () => {
           className="Leftmain"
           style={{ flex: 0.5, textAlign: "center", height: "100px" }}
         >
+          <div style={{ display: "flex" }}>
+            <img
+              style={{
+                width: 26, // 직사각형 너비
+                height: 26,
+                marginLeft: "40px",
+                marginTop: "10px",
+              }}
+              src={glass}
+              alt="glass"
+            />
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center", // 가로 중앙 정렬
+                // 부모 요소의 높이 설정 (필요에 따라 조정)
+                alignItems: "center", // 세로 중앙 정렬
+              }}
+            >
+              <input
+                type="text"
+                placeholder="친구검색"
+                style={{
+                  width: "100px", // 너비를 텍스트에 맞게 자동 설정
+                  height: "15px", // 높이를 텍스트에 맞게 자동 설정
+                  marginLeft: "8px",
+                  marginTop: "11px",
+                  opacity: 0.3, // 투명도 설정
+                }}
+              />
+            </div>
+          </div>
+          <div>
+            <img
+              style={{
+                width: 160, // 직사각형 너비
+                height: 1,
+                marginLeft: "25px",
+                marginRight: "25px",
+                marginTop: "px",
+              }}
+              src={Vector15}
+              alt="Vector15"
+            />
+          </div>
+          <div style={{ display: "flex", justifyContent: "flex-start" }}>
+            <img
+              style={{
+                width: 34, // 직사각형 너비
+                height: 34,
+                marginTop: 20,
+                marginLeft: 50,
+              }}
+              src={du}
+              alt="du"
+            />
+            <p
+              className="custom-text"
+              style={{
+                marginLeft: 13,
+                marginTop: 22,
+              }}
+            >
+              김하은<br></br>ha.eoii
+            </p>
+          </div>
           <img
             style={{
-              width: 150, // 직사각형 너비
-              height: 30,
-              marginLeft: "10px",
-              marginTop: "25px",
-            }}
-            src={search}
-            alt="search"
-          />
-          <img
-            style={{
-              width: 150, // 직사각형 너비
+              width: 170, // 직사각형 너비
               height: 1,
               marginLeft: "10px",
-              marginTop: "25px",
-            }}
-            src={Vector16}
-            alt="Vector16"
-          />
-          <img
-            style={{
-              width: 150, // 직사각형 너비
-              height: 1,
-              marginLeft: "10px",
-              marginTop: "25px",
-            }}
-            src={Vector16}
-            alt="Vector16"
-          />{" "}
-          <img
-            style={{
-              width: 150, // 직사각형 너비
-              height: 1,
-              marginLeft: "10px",
-              marginTop: "25px",
-            }}
-            src={Vector16}
-            alt="Vector16"
-          />
-          <img
-            style={{
-              width: 150, // 직사각형 너비
-              height: 1,
-              marginLeft: "10px",
-              marginTop: "25px",
-            }}
-            src={Vector16}
-            alt="Vector16"
-          />
-          <img
-            style={{
-              width: 150, // 직사각형 너비
-              height: 1,
-              marginLeft: "10px",
-              marginTop: "25px",
-            }}
-            src={Vector16}
-            alt="Vector16"
-          />
-          <img
-            style={{
-              width: 150, // 직사각형 너비
-              height: 1,
-              marginLeft: "10px",
-              marginTop: "25px",
-            }}
-            src={Vector16}
-            alt="Vector16"
-          />
-          <img
-            style={{
-              width: 150, // 직사각형 너비
-              height: 1,
-              marginLeft: "10px",
-              marginTop: "25px",
+              marginRight: "5px",
+              marginTop: "0px",
             }}
             src={Vector16}
             alt="Vector16"
           />
+          <div style={{ display: "flex", justifyContent: "flex-start" }}>
+            <img
+              style={{
+                width: 34, // 직사각형 너비
+                height: 34,
+                marginTop: 20,
+                marginLeft: 50,
+              }}
+              src={du}
+              alt="du"
+            />
+            <p
+              className="custom-text"
+              style={{
+                marginLeft: 13,
+                marginTop: 22,
+              }}
+            >
+              김하은<br></br>ha.eoii
+            </p>
+          </div>
           <img
             style={{
-              width: 150, // 직사각형 너비
+              width: 170, // 직사각형 너비
               height: 1,
               marginLeft: "10px",
-              marginTop: "25px",
+              marginRight: "5px",
+              marginTop: "0px",
             }}
             src={Vector16}
             alt="Vector16"
           />
-          <p>테스트추천</p>
+          <div style={{ display: "flex", justifyContent: "flex-start" }}>
+            <img
+              style={{
+                width: 34, // 직사각형 너비
+                height: 34,
+                marginTop: 20,
+                marginLeft: 50,
+              }}
+              src={du}
+              alt="du"
+            />
+            <p
+              className="custom-text"
+              style={{
+                marginLeft: 13,
+                marginTop: 22,
+              }}
+            >
+              김하은<br></br>ha.eoii
+            </p>
+          </div>
           <img
             style={{
-              width: 150, // 직사각형 너비
+              width: 170, // 직사각형 너비
               height: 1,
               marginLeft: "10px",
+              marginRight: "5px",
+              marginTop: "0px",
+            }}
+            src={Vector16}
+            alt="Vector16"
+          />
+          <div style={{ display: "flex", justifyContent: "flex-start" }}>
+            <img
+              style={{
+                width: 34, // 직사각형 너비
+                height: 34,
+                marginTop: 20,
+                marginLeft: 50,
+              }}
+              src={du}
+              alt="du"
+            />
+            <p
+              className="custom-text"
+              style={{
+                marginLeft: 13,
+                marginTop: 22,
+              }}
+            >
+              김하은<br></br>ha.eoii
+            </p>
+          </div>
+          <img
+            style={{
+              width: 170, // 직사각형 너비
+              height: 1,
+              marginLeft: "10px",
+              marginRight: "5px",
+              marginTop: "0px",
+            }}
+            src={Vector16}
+            alt="Vector16"
+          />
+          <br></br> <br></br>
+          <br></br>
+          <p className="custom-texts">테스트추천</p>
+          <img
+            style={{
+              width: 160, // 직사각형 너비
+              height: 1,
+              marginLeft: "25px",
+              marginRight: "25px",
+              marginTop: "-17px",
+            }}
+            src={Vector15}
+            alt="Vector15"
+          />
+          <img
+            style={{
+              width: 160, // 직사각형 너비
+              height: 100,
+              marginLeft: "1px",
               marginTop: "25px",
             }}
             src={gray}
@@ -193,9 +291,9 @@ const MainPage = () => {
           />
           <img
             style={{
-              width: 150, // 직사각형 너비
+              width: 160, // 직사각형 너비
               height: 100,
-              marginLeft: "10px",
+              marginLeft: "1px",
               marginTop: "25px",
             }}
             src={gray}
@@ -203,19 +301,9 @@ const MainPage = () => {
           />
           <img
             style={{
-              width: 150, // 직사각형 너비
+              width: 160, // 직사각형 너비
               height: 100,
-              marginLeft: "10px",
-              marginTop: "25px",
-            }}
-            src={gray}
-            alt="gray"
-          />
-          <img
-            style={{
-              width: 150, // 직사각형 너비
-              height: 100,
-              marginLeft: "10px",
+              marginLeft: "1px",
               marginTop: "25px",
             }}
             src={gray}
@@ -231,77 +319,103 @@ const MainPage = () => {
           }}
         ></div>
         <div className="Rightmain" style={{ flex: 2, textAlign: "center" }}>
-          <img
+          <div
             style={{
-              marginLeft: "-550px",
-              marginTop: "30px",
-              width: 150, // 직사각형 너비
-              height: 150,
-            }}
-            src={Pegred}
-            alt="Pegred"
-          />
-          <p
-            style={{
-              marginTop: "-120px",
+              display: "flex",
+              flexDirection: "colum",
             }}
           >
-            사용자 정보
-          </p>
-          <p>오늘의 패그</p>
+            <img
+              style={{
+                marginRight: "310px",
+                marginTop: "30px",
+                width: 150,
+                height: 150,
+                marginRight: "30px",
+              }}
+              src={Pegred}
+              alt="Pegred"
+            />
+            <div style={{ display: "flex" }}>
+              <div
+                style={{
+                  marginTop: "40px",
+                  fontSize: "50px",
+                  fontWeight: "500",
+                }}
+              >
+                ( {username} )'s Peg
+              </div>
+              <div>
+                <p className="left-aligned-text">
+                  /요즘 범죄도시4 재밌다던데 같이 보러 갈사람?
+                </p>
+              </div>
+
+              <img
+                style={{
+                  width: 90, // 직사각형 너비
+                  height: 30,
+                  marginLeft: "40px",
+                  zIndex: 0,
+                }}
+                src={profile}
+                alt="profile"
+              />
+              <p className="left-aligned-texts">프로필수정</p>
+            </div>
+          </div>
+
           <img
             style={{
-              width: 90, // 직사각형 너비
-              height: 30,
-            }}
-            src={profile}
-            alt="profile"
-          />
-          <br></br>
-          <img
-            style={{
-              width: 700, // 직사각형 너비
+              width: 1000, // 직사각형 너비
               height: 1,
               marginLeft: "10px",
-              marginTop: "25px",
             }}
             src={Vector16}
             alt="Vector16"
           />
           <img
             style={{
-              width: 100, // 직사각형 너비
-              height: 200,
+              width: 570, // 직사각형 너비
+              height: 400,
+              marginBottom: 160,
+              marginLeft: -100,
+              marginRight: 30,
             }}
             src={recone}
             alt="recone"
           />
           <img
             style={{
-              width: 200, // 직사각형 너비
-              height: 200,
-              marginBottom: 40,
-              marginLeft: 40,
+              width: 270, // 직사각형 너비
+              height: 490,
+              marginBottom: 50,
+              marginRight: 1,
+              marginTop: 100,
             }}
-            src={rectwo}
-            alt="rectwo"
+            src={Cat}
+            alt="Cat"
           />
-          <img
-            style={{
-              width: 471, // 직사각형 너비
-              height: 348,
-            }}
-            src={recthree}
-            alt="rrecthree"
-          />
-          <img
-            style={{
-              width: 471, // 직사각형 너비
-              height: 348,
-            }}
-            src={recthree}
-            alt="rrecthree"
-          />
+          <div style={{ display: "flex" }}>
+            <img
+              style={{
+                width: 471, // 직사각형 너비
+                height: 348,
+                marginRight: "10px",
+              }}
+              src={recthree}
+              alt="rrecthree"
+            />
+            <img
+              style={{
+                width: 471, // 직사각형 너비
+                height: 348,
+              }}
+              src={recthree}
+              alt="rrecthree"
+            />
+          </div>
         </div>
       </div>
       <div className="full-background">
