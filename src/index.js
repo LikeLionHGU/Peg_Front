@@ -2,11 +2,27 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import SurveyPage from "./SurveyPage";
+import Auth from "./Auth";
+import MainPage from "./MainPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/survey" element={<SurveyPage />} />
+        {/* <Route path="/gallery" element={<DetailCardPage />}>
+            <Route path=":cardId" element={<DetailCard />} />
+          </Route> */}
+
+        <Route path="/profile/:username" element={<MainPage />} />
+        <Route path="/Auth/:id" element={<Auth />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
