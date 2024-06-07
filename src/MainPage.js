@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./MainPage.css"; // MainPage.css 파일 import
 import LogoutBt from "./img/LogoutBt.png";
 import Mainlogo from "./img/Mainlogo.png";
@@ -15,10 +15,29 @@ import recthree from "./img/recthree.png";
 import Vector15 from "./img/Vector15.png";
 import du from "./img/du.png";
 import Cat from "./img/Cat.png";
+import { activities } from "./surveyData";
 
 const MainPage = () => {
+  const navigate = useNavigate();
   const [userData, setUserData] = useState(null);
+  const [allUser, setallUser] = useState([]);
   const { username } = useParams();
+
+  useEffect(() => {
+    (async () => {
+      const allUsersData = await (
+        await fetch(`http://localhost:8080/mypage/users`, {
+          method: "GET",
+          credentials: "include",
+        })
+      ).json();
+      console.log(allUsersData.users);
+      setallUser(allUsersData.users);
+    })();
+  }, []);
+
+  const pageUser = allUser.find((user) => user.id === +username);
+  console.log({ pageUser });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,6 +63,8 @@ const MainPage = () => {
       .then((data) => setUserData(data))
       .catch((error) => console.error("Error:", error));
   }, []);
+
+  if (!pageUser) return <div>User not found</div>;
 
   return (
     <>
@@ -137,134 +158,55 @@ const MainPage = () => {
               alt="Vector15"
             />
           </div>
-          <div style={{ display: "flex", justifyContent: "flex-start" }}>
-            <img
-              style={{
-                width: 34, // 직사각형 너비
-                height: 34,
-                marginTop: 20,
-                marginLeft: 50,
-              }}
-              src={du}
-              alt="du"
-            />
-            <p
-              className="custom-text"
-              style={{
-                marginLeft: 13,
-                marginTop: 22,
-              }}
-            >
-              김하은<br></br>ha.eoii
-            </p>
-          </div>
-          <img
-            style={{
-              width: 170, // 직사각형 너비
-              height: 1,
-              marginLeft: "10px",
-              marginRight: "5px",
-              marginTop: "0px",
-            }}
-            src={Vector16}
-            alt="Vector16"
-          />
-          <div style={{ display: "flex", justifyContent: "flex-start" }}>
-            <img
-              style={{
-                width: 34, // 직사각형 너비
-                height: 34,
-                marginTop: 20,
-                marginLeft: 50,
-              }}
-              src={du}
-              alt="du"
-            />
-            <p
-              className="custom-text"
-              style={{
-                marginLeft: 13,
-                marginTop: 22,
-              }}
-            >
-              김하은<br></br>ha.eoii
-            </p>
-          </div>
-          <img
-            style={{
-              width: 170, // 직사각형 너비
-              height: 1,
-              marginLeft: "10px",
-              marginRight: "5px",
-              marginTop: "0px",
-            }}
-            src={Vector16}
-            alt="Vector16"
-          />
-          <div style={{ display: "flex", justifyContent: "flex-start" }}>
-            <img
-              style={{
-                width: 34, // 직사각형 너비
-                height: 34,
-                marginTop: 20,
-                marginLeft: 50,
-              }}
-              src={du}
-              alt="du"
-            />
-            <p
-              className="custom-text"
-              style={{
-                marginLeft: 13,
-                marginTop: 22,
-              }}
-            >
-              김하은<br></br>ha.eoii
-            </p>
-          </div>
-          <img
-            style={{
-              width: 170, // 직사각형 너비
-              height: 1,
-              marginLeft: "10px",
-              marginRight: "5px",
-              marginTop: "0px",
-            }}
-            src={Vector16}
-            alt="Vector16"
-          />
-          <div style={{ display: "flex", justifyContent: "flex-start" }}>
-            <img
-              style={{
-                width: 34, // 직사각형 너비
-                height: 34,
-                marginTop: 20,
-                marginLeft: 50,
-              }}
-              src={du}
-              alt="du"
-            />
-            <p
-              className="custom-text"
-              style={{
-                marginLeft: 13,
-                marginTop: 22,
-              }}
-            >
-              김하은<br></br>ha.eoii
-            </p>
-          </div>
-          <img
-            style={{
-              width: 170, // 직사각형 너비
-              height: 1,
-              marginLeft: "10px",
-              marginRight: "5px",
-              marginTop: "0px",
-            }}
-            src={Vector16}
-            alt="Vector16"
-          />
+          {allUser.map((user) => (
+            <>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  cursor: "pointer",
+                }}
+                onClick={() => {
+                  console.log("AAA");
+                  navigate(`/profile/${user.id}`);
+                }}
+              >
+                <img
+                  style={{
+                    width: 34, // 직사각형 너비
+                    height: 34,
+                    marginTop: 20,
+                    marginLeft: 50,
+                  }}
+                  // src={du}
+                  src={user.profilePictureUrl}
+                  alt="du"
+                />
+                <p
+                  className="custom-text"
+                  style={{
+                    marginLeft: 13,
+                    marginTop: 22,
+                  }}
+                >
+                  {user.name}
+                  <br></br>
+                  {user.email.split("@")[0]}
+                </p>
+              </div>
+              <img
+                style={{
+                  width: 170, // 직사각형 너비
+                  height: 1,
+                  marginLeft: "10px",
+                  marginRight: "5px",
+                  marginTop: "0px",
+                }}
+                src={Vector16}
+                alt="Vector16"
+              />
+            </>
+          ))}
           <br></br> <br></br>
           <br></br>
           <p className="custom-texts">테스트추천</p>
@@ -332,8 +274,10 @@ const MainPage = () => {
                 width: 150,
                 height: 150,
                 marginRight: "30px",
+                borderRadius: "50%",
               }}
-              src={Pegred}
+              // src={Pegred}
+              src={pageUser.profilePictureUrl}
               alt="Pegred"
             />
             <div style={{ display: "flex", flexDirection: "column" }}>
@@ -344,12 +288,10 @@ const MainPage = () => {
                   fontWeight: "500",
                 }}
               >
-                ( {username} )'s Peg
+                ( {pageUser.name} )'s Peg
               </div>
               <div>
-                <p className="left-aligned-text">
-                  /요즘 범죄도시4 재밌다던데 같이 보러 갈사람?
-                </p>
+                <p className="left-aligned-text">{activities[+username]}</p>
               </div>
 
               <img
