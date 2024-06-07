@@ -1,7 +1,7 @@
 const multiplechoicetest = [
   {
     questionID: "field1",
-    title: "소개 상대와의 카톡방이 개설되었다, 그때 당신의 속마음은?",
+    title: "상대와의 카톡방이 개설되었다, 그때 당신의 속마음은?",
     optionType: "B",
     option: [
       {
