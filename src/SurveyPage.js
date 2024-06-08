@@ -94,13 +94,52 @@ function SurveyPage() {
         })
       ).json();
       if (surveyName === "oxtest") {
-        console.log(resultData["oxTestResult"], "AAAAAA");
-        if (resultData["oxTestResult"] != -1) setSurveyStatus(2);
-        else setSurveyStatus(1);
+        console.log(resultData["oxTestResult"], "oxTestResult");
+        if (resultData["oxTestResult"] == -1) setSurveyStatus(1);
+        else {
+          setSurveyStatus(2);
+          const oCount = resultData["oxTestResult"];
+          if (oCount <= 3) {
+            // 1
+            navigate("./1", {
+              state: {
+                uid: userData.id,
+              },
+            });
+          } else if (oCount <= 7) {
+            // 2
+            navigate("./2", {
+              state: {
+                uid: userData.id,
+              },
+            });
+          } else if (oCount <= 9) {
+            // 3
+            navigate("./3", {
+              state: {
+                uid: userData.id,
+              },
+            });
+          } else {
+            //4
+            navigate("./4", {
+              state: {
+                uid: userData.id,
+              },
+            });
+          }
+        }
       } else if (surveyName === "multiplechoicetest") {
-        console.log(resultData["oxTestResult"], "AAAAAA");
-        if (resultData["multipleResult"] != "null") setSurveyStatus(2);
-        else setSurveyStatus(1);
+        console.log(resultData["multiplechoicetest"], "multiplechoicetest");
+        if (resultData["multipleResult"] == "null") setSurveyStatus(1);
+        else {
+          setSurveyStatus(2);
+          navigate("./" + resultData["multipleResult"], {
+            state: {
+              uid: userData.id,
+            },
+          });
+        }
       }
     })();
   }, []);
@@ -199,19 +238,39 @@ function SurveyPage() {
 
                         if (oCount <= 3) {
                           // 1
-                          navigate("./1");
+                          navigate("./1", {
+                            state: {
+                              uid: userData.id,
+                            },
+                          });
                         } else if (oCount <= 7) {
                           // 2
-                          navigate("./2");
+                          navigate("./2", {
+                            state: {
+                              uid: userData.id,
+                            },
+                          });
                         } else if (oCount <= 9) {
                           // 3
-                          navigate("./3");
+                          navigate("./3", {
+                            state: {
+                              uid: userData.id,
+                            },
+                          });
                         } else {
                           //4
-                          navigate("./4");
+                          navigate("./4", {
+                            state: {
+                              uid: userData.id,
+                            },
+                          });
                         }
                       } else if (surveyName === "multiplechoicetest") {
-                        navigate("./" + resultData.multipleResult);
+                        navigate("./" + resultData.multipleResult, {
+                          state: {
+                            uid: userData.id,
+                          },
+                        });
                       }
                     } catch (e) {}
 
