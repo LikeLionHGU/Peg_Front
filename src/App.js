@@ -107,8 +107,8 @@ function App() {
               className="Truestories"
               style={{
                 color: "black",
-                marginLeft: "700px",
-                marginBottom: "1px", // 이 값을 조정하여 위치를 밑으로 이동
+                marginLeft: "720px",
+                marginTop: "140px", // 이 값을 조정하여 위치를 밑으로 이동
               }}
             >
               True stories <br></br>about the deep
