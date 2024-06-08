@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./SurveyPage.css"; // SurveyPage.css 파일 import
-import { useState } from "react";
 import AnswerA from "./component/AnswerA";
 import AnswerB from "./component/AnswerB";
 import { useNavigate, useParams } from "react-router-dom";
@@ -9,6 +8,8 @@ import OXTest from "./img/OXTest.png";
 import teduri from "./img/teduri.png";
 import Group from "./img/Group.png";
 import Pink from "./img/Pink.png";
+import before from "./img/before.png"; // 왼쪽 화살표 이미지 import
+import after from "./img/after.png"; // 오른쪽 화살표 이미지 import
 import { surveyData } from "./surveyData";
 
 const resultf = {
@@ -166,11 +167,43 @@ function SurveyPage() {
           />
 
           <div className="content-text">
-            <h1 style={{ textAlign: "center", fontFamily: "YourFontFamily" }}>
+            <h1
+              style={{
+                textAlign: "center",
+                fontFamily: "YourFontFamily",
+                height: "115px",
+              }}
+            >
               {data[currentQuestion].title}
             </h1>
-            <div className="question-answer">{answerComponent}</div>
-            <div>
+            <div
+              className="question-answer"
+              style={{
+                marginTop: "20px",
+                display: "flex",
+                flexDirection: "column", // 수직 정렬
+                justifyContent: "center",
+                alignItems: "center", // 수직 정렬
+                gap: "20px", // 간격 설정
+              }}
+            >
+              {answerComponent}
+            </div>
+          </div>
+        </div>
+        <div>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <img
+              src={Pink}
+              alt="Pink"
+              style={{
+                height: "90px",
+                width: "520px",
+                marginTop: "-60px",
+                zIndex: 1,
+              }} // 높이와 너비를 조정
+            />
+            <div style={{ display: "flex", alignItems: "center" }}>
               <button
                 onClick={() => {
                   setCurrentQuestion((prev) => {
@@ -178,13 +211,20 @@ function SurveyPage() {
                     return 0;
                   });
                 }}
+                style={{ marginRight: "20px" }} // 왼쪽 화살표 버튼 위치 조정
               >
-                이전질문
+                <img src={before} alt="Previous" style={{ width: "30px" }} />
               </button>
 
+              <div> {currentQuestion} / 10</div>
+
               {data.length - 1 > currentQuestion ? (
-                <button onClick={nextQuestion} disabled={!currentAnswer}>
-                  다음질문
+                <button
+                  onClick={nextQuestion}
+                  disabled={!currentAnswer}
+                  style={{ marginLeft: "20px" }} // 오른쪽 화살표 버튼 위치 조정
+                >
+                  <img src={after} alt="Next" style={{ width: "30px" }} />
                 </button>
               ) : (
                 <button
@@ -277,22 +317,12 @@ function SurveyPage() {
                     // navigate("/result/characterC");
                   }}
                   disabled={!currentAnswer}
+                  style={{ marginLeft: "20px" }} // 제출 버튼 위치 조정
                 >
-                  등록
+                  <img src={after} alt="Submit" style={{ width: "30px" }} />
                 </button>
               )}
             </div>
-          </div>
-        </div>
-        <div>
-          {" "}
-          <div>
-            <img
-              src={Pink}
-              alt="Pink"
-              style={{ height: "90px", width: "520px", marginTop: "-30px" }} // 높이와 너비를 조정
-            />
-            <div> {currentQuestion} / 10</div>
           </div>
         </div>
       </div>
