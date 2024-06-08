@@ -233,3 +233,14 @@
   color: rgba(255, 254, 254, 0.7); /* 흰색의 연한 색상 */
   font-weight: 500;
 }
+
+.animated-div {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animated-div.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -43,6 +43,23 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in");
+        }
+      });
+    });
+
+    const elements = document.querySelectorAll(".animated-div");
+    elements.forEach((el) => observer.observe(el));
+
+    return () => {
+      elements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
   const navigate = useNavigate();
 
   const [isModalVisible, setModalVisible] = useState(false);
@@ -73,9 +90,9 @@ function App() {
 
   return (
     <>
-      <div className="full-background">
-        <div className="Mainpagetotal">
-          <div className="header">
+      <div className="full-background ">
+        <div className="Mainpagetotal animated-div">
+          <div className="header animated-div">
             <div
               className="fade-in-section"
               style={{
@@ -87,7 +104,7 @@ function App() {
               world.<br></br> Who would be born must<br></br> first destroy a
               world.
             </div>
-            <div className="fade-in-section">
+            <div className="fade-in-section animated-div">
               <img
                 src={LoginBt}
                 alt="LoginBt"
@@ -102,9 +119,9 @@ function App() {
               />
             </div>
           </div>
-          <div style={{ position: "absolute" }}>
+          <div style={{ position: "absolute" }} className="animated-div">
             <div
-              className="Truestories"
+              className="Truestories animated-div"
               style={{
                 color: "black",
                 marginLeft: "720px",
@@ -117,6 +134,7 @@ function App() {
             <img
               src={egg}
               alt="egg"
+              className="animated-div"
               style={{
                 height: "270px",
                 width: "260px",
@@ -127,14 +145,14 @@ function App() {
             />
           </div>
 
-          <div className="MainText">PEG</div>
+          <div className="MainText animated-div">PEG</div>
         </div>
       </div>
-      <div className="full-backgroundd"></div>
+      <div className="full-backgroundd "></div>
 
-      <div className="full-backgrounddd">
-        <div className="secondMainpage">
-          <div className="secondheader">
+      <div className="full-backgrounddd ">
+        <div className="secondMainpage animated-div">
+          <div className="secondheader animated-div">
             S(
             <img
               src={heart}
@@ -147,7 +165,7 @@ function App() {
             />
             )UL SNS<br></br> ARCHIVING ME
           </div>
-          <div className="secondtext">
+          <div className="secondtext animated-div">
             나 그리고 상대의 내면 <div className="insideweight">(</div>{" "}
             <img
               src={Y2K}
@@ -164,7 +182,7 @@ function App() {
         </div>
       </div>
 
-      <div className="full-backgrounddd">
+      <div className="full-backgrounddd ">
         <div style={{ display: "flex", height: "100%", alignItems: "center" }}>
           <img
             src={Mainpageone}
@@ -183,6 +201,7 @@ function App() {
               marginTop: "390px",
               textAlign: "Right",
             }}
+            className="animated-div"
           >
             <div className="boldtexttt">나를 알아가는 상황문답</div>
             <div className="lighttext">
@@ -193,7 +212,7 @@ function App() {
       </div>
       {/* */}
 
-      <div className="full-backgrounddd">
+      <div className="full-backgrounddd ">
         {" "}
         <div
           style={{
@@ -202,6 +221,7 @@ function App() {
             alignItems: "center",
             justifyContent: "flex-end",
           }}
+          className="animated-div"
         >
           <div
             style={{
@@ -211,6 +231,7 @@ function App() {
               textAlign: "Left",
               zIndex: 2,
             }}
+            className="animated-div"
           >
             <div className="boldtextt">나를 담은 아카이브</div>
             <div className="lighttext">
@@ -230,7 +251,7 @@ function App() {
           />
         </div>
       </div>
-      <div className="full-backgrounddd">
+      <div className="full-backgrounddd ">
         {" "}
         <div style={{ display: "flex", height: "100%", alignItems: "center" }}>
           <img
@@ -249,6 +270,7 @@ function App() {
               marginTop: "310px",
               textAlign: "Right",
             }}
+            className="animated-div"
           >
             <div className="boldtext">나만의 테스트카드</div>
             <div className="lighttext">
@@ -272,6 +294,7 @@ function App() {
           fontSize: 16,
           fontWeight: "bold",
         }}
+        className="animated-div"
         onClick={handleClick}
       >
         클릭
@@ -290,6 +313,7 @@ function App() {
           fontSize: 16,
           fontWeight: "bold",
         }}
+        className="animated-div"
         onClick={handleClickss}
       >
         클릭
@@ -303,12 +327,13 @@ function App() {
           marginRight: "55px",
           zIndex: 0,
         }}
+        className="animated-div"
       />
-      <div className="full-backgroundddd">
-        <div className="footer">
-          <div className="lastPeg">PEG</div>
-          <div className="Information">
-            <div className="team">
+      <div className="full-backgroundddd ">
+        <div className="footer animated-div">
+          <div className="lastPeg animated-div">PEG</div>
+          <div className="Information animated-div">
+            <div className="team animated-div">
               TEAM : Beggy Jins<br></br>
               <br></br>
               김고은(PM)<br></br>
@@ -316,7 +341,7 @@ function App() {
               김하은(Front_End Developer)<br></br>
               오세훈(Back_End Developer)<br></br>
             </div>
-            <div className="email">
+            <div className="email animated-div">
               EMAIL<br></br>
               <br></br>
               jinny010718@handong.ac.kr<br></br>
@@ -324,7 +349,7 @@ function App() {
               hg2660765@gmail.com <br></br>
               saint0325@handong.ac.kr
             </div>
-            <div className="require">
+            <div className="require animated-div">
               INSTAGRAM<br></br>
               @Peg.Official._<br></br>
               <br></br>
@@ -333,10 +358,10 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="full-backgrounddddd">
-        <div className="animated-title">
-          <div className="track">
-            <div className="content">
+      <div className="full-backgrounddddd ">
+        <div className="animated-title animated-div">
+          <div className="track animated-div">
+            <div className="content animated-div">
               &nbsp;&nbsp; SOUL SNS ARCHIVING ME&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; SOUL SNS
               ARCHIVING ME &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;

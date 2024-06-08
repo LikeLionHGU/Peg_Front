@@ -281,7 +281,7 @@ function SurveyPage() {
                   등록
                 </button>
               )}
-            </div>{" "}
+            </div>
           </div>
         </div>
         <div>
