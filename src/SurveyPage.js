@@ -101,16 +101,32 @@ function SurveyPage() {
           const oCount = resultData["oxTestResult"];
           if (oCount <= 3) {
             // 1
-            navigate("./1");
+            navigate("./1", {
+              state: {
+                uid: userData.id,
+              },
+            });
           } else if (oCount <= 7) {
             // 2
-            navigate("./2");
+            navigate("./2", {
+              state: {
+                uid: userData.id,
+              },
+            });
           } else if (oCount <= 9) {
             // 3
-            navigate("./3");
+            navigate("./3", {
+              state: {
+                uid: userData.id,
+              },
+            });
           } else {
             //4
-            navigate("./4");
+            navigate("./4", {
+              state: {
+                uid: userData.id,
+              },
+            });
           }
         }
       } else if (surveyName === "multiplechoicetest") {
@@ -222,16 +238,32 @@ function SurveyPage() {
 
                         if (oCount <= 3) {
                           // 1
-                          navigate("./1");
+                          navigate("./1", {
+                            state: {
+                              uid: userData.id,
+                            },
+                          });
                         } else if (oCount <= 7) {
                           // 2
-                          navigate("./2");
+                          navigate("./2", {
+                            state: {
+                              uid: userData.id,
+                            },
+                          });
                         } else if (oCount <= 9) {
                           // 3
-                          navigate("./3");
+                          navigate("./3", {
+                            state: {
+                              uid: userData.id,
+                            },
+                          });
                         } else {
                           //4
-                          navigate("./4");
+                          navigate("./4", {
+                            state: {
+                              uid: userData.id,
+                            },
+                          });
                         }
                       } else if (surveyName === "multiplechoicetest") {
                         navigate("./" + resultData.multipleResult, {
