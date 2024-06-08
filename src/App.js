@@ -107,8 +107,8 @@ function App() {
               className="Truestories"
               style={{
                 color: "black",
-
                 marginLeft: "700px",
+                marginBottom: "1px", // 이 값을 조정하여 위치를 밑으로 이동
               }}
             >
               True stories <br></br>about the deep
@@ -118,10 +118,10 @@ function App() {
               src={egg}
               alt="egg"
               style={{
-                height: "260px",
+                height: "270px",
                 width: "260px",
-                marginLeft: "300px",
-                marginTop: "-80px",
+                marginLeft: "600px",
+                marginTop: "0px", // 이 값을 조정하여 위치를 밑으로 이동
                 zIndex: 0,
               }}
             />

@@ -98,6 +98,7 @@ const MainPage = () => {
       <div
         style={{
           width: "95%",
+
           textAlign: "center",
           borderBottom: "1px solid #aaa",
           lineHeight: "0.1em",
@@ -111,7 +112,7 @@ const MainPage = () => {
       >
         <div
           className="Leftmain"
-          style={{ flex: 0.5, textAlign: "center", height: "100px" }}
+          style={{ flex: 0.5, textAlign: "center", height: "400px" }}
         >
           <div style={{ display: "flex" }}>
             <img
@@ -148,7 +149,7 @@ const MainPage = () => {
           <div>
             <img
               style={{
-                width: 160, // 직사각형 너비
+                width: 210, // 직사각형 너비
                 height: 1,
                 marginLeft: "25px",
                 marginRight: "25px",
@@ -196,7 +197,7 @@ const MainPage = () => {
               </div>
               <img
                 style={{
-                  width: 170, // 직사각형 너비
+                  width: 210, // 직사각형 너비
                   height: 1,
                   marginLeft: "10px",
                   marginRight: "5px",
@@ -212,7 +213,7 @@ const MainPage = () => {
           <p className="custom-texts">테스트추천</p>
           <img
             style={{
-              width: 160, // 직사각형 너비
+              width: 210, // 직사각형 너비
               height: 1,
               marginLeft: "25px",
               marginRight: "25px",
@@ -223,7 +224,7 @@ const MainPage = () => {
           />
           <img
             style={{
-              width: 160, // 직사각형 너비
+              width: 200, // 직사각형 너비
               height: 100,
               marginLeft: "1px",
               marginTop: "25px",
@@ -233,7 +234,7 @@ const MainPage = () => {
           />
           <img
             style={{
-              width: 160, // 직사각형 너비
+              width: 200, // 직사각형 너비
               height: 100,
               marginLeft: "1px",
               marginTop: "25px",
@@ -243,7 +244,7 @@ const MainPage = () => {
           />
           <img
             style={{
-              width: 160, // 직사각형 너비
+              width: 200, // 직사각형 너비
               height: 100,
               marginLeft: "1px",
               marginTop: "25px",
