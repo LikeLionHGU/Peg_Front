@@ -93,6 +93,9 @@ const MainPage = () => {
           }}
           src={LogoutBt}
           alt="LogoutBt"
+          onClick={() => {
+            document.location.href = "/";
+          }}
         />
       </div>
       <div

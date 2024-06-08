@@ -7,6 +7,7 @@ import SurveyPage from "./SurveyPage";
 import Auth from "./Auth";
 import MainPage from "./MainPage";
 import ResultPage from "./ResultPage";
+import Mypage from "./Mypage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -21,6 +22,7 @@ root.render(
             <Route path=":cardId" element={<DetailCard />} />
           </Route> */}
 
+        <Route path="/mypage" element={<Mypage />} />
         <Route path="/profile/:username" element={<MainPage />} />
         <Route path="/Auth/:id" element={<Auth />} />
       </Routes>
