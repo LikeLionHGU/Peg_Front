@@ -23,7 +23,7 @@ function AnswerB({
               padding: "16px 40px",
               borderRadius: 10,
             }} // 추가된 key prop
-            className={currentAnswer === item.answerID ? "selected" : ""}
+            className={currentAnswer == item.answerID ? "selected" : ""}
             onClick={() => {
               setAnswer(questionId, item.answerID);
               nextQuestion();

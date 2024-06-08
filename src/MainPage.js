@@ -387,6 +387,9 @@ const MainPage = () => {
                   float: "left",
                   marginTop: 32,
                 }}
+                onClick={() => {
+                  navigate("/read/multiplechoicetest/" + username);
+                }}
               >
                 <img
                   style={

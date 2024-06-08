@@ -8,6 +8,7 @@ import Auth from "./Auth";
 import MainPage from "./MainPage";
 import ResultPage from "./ResultPage";
 import Mypage from "./Mypage";
+import SurveyPageRO from "./SurveyPage_ro";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,6 +17,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/read/:surveyName/:id" element={<SurveyPageRO />} />
         <Route path="/survey/:surveyName" element={<SurveyPage />} />
         <Route path="/survey/:surveyName/:resultId" element={<ResultPage />} />
         {/* <Route path="/gallery" element={<DetailCardPage />}>
