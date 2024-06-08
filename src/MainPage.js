@@ -17,11 +17,33 @@ import du from "./img/du.png";
 import Cat from "./img/Cat.png";
 import { activities } from "./surveyData";
 
+import PicleftRectOX from "./img/Rectangle 539.png";
+import PicrightBig from "./img/Rectangle 542.png";
+import PicrightSmall from "./img/Rectangle 543.png";
+
+import PicEmpty from "./img/emptyEntry.png";
+
 const MainPage = () => {
   const navigate = useNavigate();
   const [userData, setUserData] = useState(null);
   const [allUser, setallUser] = useState([]);
   const { username } = useParams();
+
+  const [userSurvey, setUserSurvey] = useState({});
+
+  useEffect(() => {
+    setUserSurvey({});
+    (async () => {
+      const userSurveyData = await (
+        await fetch(`http://localhost:8080/mypage/result/${username}`, {
+          method: "GET",
+          credentials: "include",
+        })
+      ).json();
+      console.log(userSurveyData);
+      setUserSurvey(userSurveyData);
+    })();
+  }, [username]);
 
   useEffect(() => {
     (async () => {
@@ -181,6 +203,7 @@ const MainPage = () => {
                     height: 34,
                     marginTop: 20,
                     marginLeft: 50,
+                    borderRadius: "50%",
                   }}
                   // src={du}
                   src={user.profilePictureUrl}
@@ -213,48 +236,74 @@ const MainPage = () => {
           ))}
           <br></br> <br></br>
           <br></br>
-          <p className="custom-texts">테스트추천</p>
-          <img
-            style={{
-              width: 210, // 직사각형 너비
-              height: 1,
-              marginLeft: "25px",
-              marginRight: "25px",
-              marginTop: "-17px",
-            }}
-            src={Vector15}
-            alt="Vector15"
-          />
-          <img
-            style={{
-              width: 200, // 직사각형 너비
-              height: 100,
-              marginLeft: "1px",
-              marginTop: "25px",
-            }}
-            src={gray}
-            alt="gray"
-          />
-          <img
-            style={{
-              width: 200, // 직사각형 너비
-              height: 100,
-              marginLeft: "1px",
-              marginTop: "25px",
-            }}
-            src={gray}
-            alt="gray"
-          />
-          <img
-            style={{
-              width: 200, // 직사각형 너비
-              height: 100,
-              marginLeft: "1px",
-              marginTop: "25px",
-            }}
-            src={gray}
-            alt="gray"
-          />
+          {userData?.id === +username && (
+            <>
+              <p className="custom-texts">테스트추천</p>
+              <img
+                style={{
+                  width: 210, // 직사각형 너비
+                  height: 1,
+                  marginLeft: "25px",
+                  marginRight: "25px",
+                  marginTop: "-17px",
+                }}
+                src={Vector15}
+                alt="Vector15"
+              />
+              {/* 사지선다 */}
+              {userSurvey?.multipleResult === "null" && (
+                <div
+                  class="image-container"
+                  style={{
+                    width: 200, // 직사각형 너비
+                    height: 100,
+                    marginLeft: "33px",
+                    marginTop: "25px",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => {
+                    navigate("/survey/multiplechoicetest");
+                  }}
+                >
+                  <img src={PicleftRectOX} alt="recone" />
+                  <div class="hover-text">
+                    <div>
+                      <b>
+                        연애 시뮬레이션 <br />
+                        객관식 테스트
+                      </b>
+                    </div>
+                  </div>
+                </div>
+              )}
+              {/* OX */}
+              {userSurvey?.oxTestResult === -1 && (
+                <div
+                  class="image-container"
+                  style={{
+                    width: 200, // 직사각형 너비
+                    height: 100,
+                    marginLeft: "33px",
+                    marginTop: "25px",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => {
+                    navigate("/survey/oxtest");
+                  }}
+                >
+                  <img src={PicleftRectOX} alt="recone" />
+                  <div class="hover-text">
+                    <div>
+                      <b>
+                        내 연애 가치관 <br />
+                        OX 테스트
+                      </b>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </>
+          )}
         </div>
         <div
           style={{
@@ -264,7 +313,10 @@ const MainPage = () => {
             height: "200px", // 길이를 5배 증가
           }}
         ></div>
-        <div className="Rightmain" style={{ flex: 2, textAlign: "center" }}>
+        <div
+          className="Rightmain"
+          style={{ flex: 2, textAlign: "center", minHeight: 920 }}
+        >
           <div
             style={{
               display: "flex",
@@ -311,7 +363,6 @@ const MainPage = () => {
               <p className="left-aligned-texts">프로필수정</p>
             </div>
           </div>
-
           <img
             style={{
               width: 1000, // 직사각형 너비
@@ -321,18 +372,87 @@ const MainPage = () => {
             src={Vector16}
             alt="Vector16"
           />
-          <img
-            style={{
-              width: 570, // 직사각형 너비
-              height: 400,
-              marginBottom: 160,
-              marginLeft: -100,
-              marginRight: 30,
-            }}
-            src={recone}
-            alt="recone"
-          />
-          <img
+          {userSurvey?.multipleResult === "null" &&
+            userSurvey?.oxTestResult === -1 && (
+              <img src={PicEmpty} style={{ width: 230, marginTop: 64 }} />
+            )}
+
+          {!!userSurvey?.multipleResult &&
+            userSurvey?.multipleResult !== "null" && (
+              <div
+                class="image-container"
+                style={{
+                  width: 652,
+                  height: 430,
+                  float: "left",
+                  marginTop: 32,
+                }}
+              >
+                <img
+                  style={
+                    {
+                      // width: 570, // 직사각형 너비
+                      // height: 400,
+                      // marginBottom: 160,
+                      // marginLeft: -100,
+                      // marginRight: 30,
+                    }
+                  }
+                  src={PicrightBig}
+                  alt="recone"
+                />
+                <div class="hover-text biga">
+                  <div>
+                    <b>
+                      연애 시뮬레이션 <br />
+                      객관식 테스트
+                      <br />
+                      결과보기
+                    </b>
+                  </div>
+                </div>
+              </div>
+            )}
+
+          {!!userSurvey?.oxTestResult && userSurvey?.oxTestResult !== -1 && (
+            <div
+              class="image-container"
+              style={{
+                width: 288,
+                height: 543,
+                float: "left",
+                marginLeft: 25,
+                marginTop: 150,
+                // marginLeft: 480,
+              }}
+            >
+              <img
+                style={
+                  {
+                    // width: 570, // 직사각형 너비
+                    // height: 400,
+                    // marginBottom: 160,
+                    // marginLeft: -100,
+                    // marginRight: 30,
+                  }
+                }
+                src={PicrightSmall}
+                alt="recone"
+              />
+              <div class="hover-text biga">
+                <div>
+                  <b>
+                    내 연애 가치관 <br />
+                    OX 테스트
+                    <br />
+                    결과보기
+                  </b>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* <img
             style={{
               width: 270, // 직사각형 너비
               height: 490,
@@ -340,29 +460,9 @@ const MainPage = () => {
               marginRight: 1,
               marginTop: 100,
             }}
-            src={Cat}
+            src={PicrightSmall}
             alt="Cat"
-          />
-          <div style={{ display: "flex" }}>
-            <img
-              style={{
-                width: 471, // 직사각형 너비
-                height: 348,
-                marginRight: "20px",
-                marginLeft: "20px",
-              }}
-              src={recthree}
-              alt="rrecthree"
-            />
-            <img
-              style={{
-                width: 471, // 직사각형 너비
-                height: 348,
-              }}
-              src={recthree}
-              alt="rrecthree"
-            />
-          </div>
+          /> */}
         </div>
       </div>
       <br></br> <br></br>
