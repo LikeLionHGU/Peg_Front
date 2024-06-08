@@ -7,7 +7,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import AnswerC from "./component/AnswerC";
 import OXTest from "./img/OXTest.png";
 import teduri from "./img/teduri.png";
-import halfcircle from "./img/halfcircle.png";
+import Group from "./img/Group.png";
 import { surveyData } from "./surveyData";
 
 const resultf = {
@@ -157,20 +157,12 @@ function SurveyPage() {
       <div className="SurveyPage">
         <img src={teduri} alt="teduri" className="background-image" />
         <div className="content">
-          <img
-            src={halfcircle}
-            alt="halfcircle"
-            className="background-images"
-          />
+          <img src={Group} alt="Group" className="background-images" />
           <div className="content-text">
-            <div>Hello World!</div>
-
-            <div>Current Question : {currentQuestion}</div>
-            <h1>{data[currentQuestion].title}</h1>
-            <div className="question-answer">
-              <h3>Answer</h3>
-              {answerComponent}
-            </div>
+            <h1 style={{ textAlign: "center", fontFamily: "YourFontFamily" }}>
+              {data[currentQuestion].title}
+            </h1>
+            <div className="question-answer">{answerComponent}</div>
             <div>
               <button
                 onClick={() => {
@@ -182,6 +174,7 @@ function SurveyPage() {
               >
                 이전질문
               </button>
+
               {data.length - 1 > currentQuestion ? (
                 <button onClick={nextQuestion} disabled={!currentAnswer}>
                   다음질문
@@ -281,9 +274,11 @@ function SurveyPage() {
                   등록
                 </button>
               )}
-            </div>
+            </div>{" "}
+            <div> {currentQuestion} / 10</div>
           </div>
         </div>
+        <div>dd</div>
       </div>
     </>
   );

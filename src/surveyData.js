@@ -6,7 +6,7 @@ const multiplechoicetest = [
     option: [
       {
         answerID: 1,
-        answerText: "오...어떤 사람일까.. 내가 실수하면 어떡하지?",
+        answerText: ".어떤 사람일까.. 내가 실수하면 어떡하지?",
       },
       {
         answerID: 2,
@@ -18,7 +18,7 @@ const multiplechoicetest = [
       },
       {
         answerID: 4,
-        answerText: "언제 만나자고 하지? 취미부터 공유해봐야겠다.",
+        answerText: "만나자고 하지? 취미부터 공유해봐야겠다.",
       },
     ],
   },
