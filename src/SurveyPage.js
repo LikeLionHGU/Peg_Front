@@ -8,6 +8,7 @@ import AnswerC from "./component/AnswerC";
 import OXTest from "./img/OXTest.png";
 import teduri from "./img/teduri.png";
 import Group from "./img/Group.png";
+import Pink from "./img/Pink.png";
 import { surveyData } from "./surveyData";
 
 const resultf = {
@@ -157,7 +158,13 @@ function SurveyPage() {
       <div className="SurveyPage">
         <img src={teduri} alt="teduri" className="background-image" />
         <div className="content">
-          <img src={Group} alt="Group" className="background-images" />
+          <img
+            src={Group}
+            alt="Group"
+            className="background-images"
+            style={{ height: "520px", width: "520px", marginTop: "-40px" }} // 높이와 너비를 조정
+          />
+
           <div className="content-text">
             <h1 style={{ textAlign: "center", fontFamily: "YourFontFamily" }}>
               {data[currentQuestion].title}
@@ -275,10 +282,19 @@ function SurveyPage() {
                 </button>
               )}
             </div>{" "}
+          </div>
+        </div>
+        <div>
+          {" "}
+          <div>
+            <img
+              src={Pink}
+              alt="Pink"
+              style={{ height: "90px", width: "520px", marginTop: "-30px" }} // 높이와 너비를 조정
+            />
             <div> {currentQuestion} / 10</div>
           </div>
         </div>
-        <div>dd</div>
       </div>
     </>
   );
