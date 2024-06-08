@@ -163,15 +163,19 @@ function SurveyPage() {
             src={Group}
             alt="Group"
             className="background-images"
-            style={{ height: "520px", width: "520px", marginTop: "-40px" }} // 높이와 너비를 조정
+            style={{
+              //  height: "520px", width: "520px", marginTop: "-40px"
+              position: "absolute",
+            }} // 높이와 너비를 조정
           />
 
-          <div className="content-text">
+          <div className="content-text" style={{ marginLeft: 8 }}>
             <h1
               style={{
                 textAlign: "center",
                 fontFamily: "YourFontFamily",
                 height: "115px",
+                marginBottom: 64,
               }}
             >
               {data[currentQuestion].title}
@@ -179,6 +183,7 @@ function SurveyPage() {
             <div
               className="question-answer"
               style={{
+                width: 454,
                 marginTop: "20px",
                 display: "flex",
                 flexDirection: "column", // 수직 정렬
@@ -192,18 +197,43 @@ function SurveyPage() {
           </div>
         </div>
         <div>
-          <div style={{ display: "flex", alignItems: "center" }}>
+          <div
+            style={{
+              position: "relative",
+              width: 520,
+              height: 90,
+              display: "flex",
+              backgroundColor: "black",
+            }}
+          >
             <img
               src={Pink}
               alt="Pink"
               style={{
+                position: "absolute",
                 height: "90px",
                 width: "520px",
-                marginTop: "-60px",
+                // marginTop: "-60px",
                 zIndex: 1,
               }} // 높이와 너비를 조정
             />
-            <div style={{ display: "flex", alignItems: "center" }}>
+            <div
+              style={{
+                position: "absolute",
+                // width: "00px",
+                padding: 10,
+                right: 0,
+                left: 0,
+                top: 0,
+                bottom: 0,
+                zIndex: 44,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                // width: "100%",
+                // margin: 16,
+              }}
+            >
               <button
                 onClick={() => {
                   setCurrentQuestion((prev) => {
